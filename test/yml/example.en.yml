@@ -1,0 +1,3 @@
+about: 'about'
+at.shortdate.hour.format: 'at %formatted_date%'
+today: 'today'
