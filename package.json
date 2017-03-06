@@ -1,6 +1,6 @@
 {
   "name": "openl10n-to-bazingatranslator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Script to convert openl10n .yml files to files expected by bazinga-translator",
   "main": "dist/index.js",
   "files": [
