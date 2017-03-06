@@ -1,7 +1,7 @@
 function formatJs(translationList, locale, domain) {
   const translatorCalls = Object.keys(translationList).map((translationKey) => {
     const translation = translationList[translationKey];
-    return `Translator.add("${translationKey}", "${translation}", "${domain}", "${locale}");`;
+    return `Translator.add(${JSON.stringify(translationKey)}, ${JSON.stringify(translation)}, "${domain}", "${locale}");`;
   });
 
   return `(function (Translator) {${translatorCalls.join('')}})(Translator);`;

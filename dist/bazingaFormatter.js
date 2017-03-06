@@ -9,7 +9,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function formatJs(translationList, locale, domain) {
   var translatorCalls = Object.keys(translationList).map(function (translationKey) {
     var translation = translationList[translationKey];
-    return 'Translator.add("' + translationKey + '", "' + translation + '", "' + domain + '", "' + locale + '");';
+    return 'Translator.add(' + JSON.stringify(translationKey) + ', ' + JSON.stringify(translation) + ', "' + domain + '", "' + locale + '");';
   });
 
   return '(function (Translator) {' + translatorCalls.join('') + '})(Translator);';
